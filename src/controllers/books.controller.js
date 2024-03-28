@@ -6,6 +6,13 @@ export default class BooksController {
     res.render("home", { books: books });
   }
   getAddView(req, res) {
-    res.render("addBook");
+    res.render("addBook", { validationErrors: null });
+  }
+  postNewBook(req, res) {
+    const { name, detail, price } = req.body;
+    const img = "images/" + req.file.filename;
+    BookModels.addBooks(name, detail, price, img);
+    const books = BookModels.getAllBooks();
+    res.render("home", { books: books });
   }
 }

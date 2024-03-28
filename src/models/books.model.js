@@ -9,6 +9,10 @@ export default class BookModels {
   static getAllBooks() {
     return books;
   }
+  static addBooks(name, detail, price, img) {
+    const newBook = new BookModels(books.length + 1, name, detail, price, img);
+    books.push(newBook);
+  }
 }
 
 const books = [
