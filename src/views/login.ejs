@@ -1,0 +1,28 @@
+<div class="m-5">
+  <h3 class="text-center">LOGIN</h3>
+  <% if(validationErrors){ %>
+    <div class="alert alert-danger" role="alert"><%=validationErrors%></div>
+  <%}%>
+  <form action="/login" method="post" class="w-25 mx-auto">
+    <label for="useremail" class="form-label">Enter Email :</label>
+    <input
+      type="email"
+      class="form-control"
+      id="useremail"
+      name="useremail"
+      placeholder="user@email.com"
+    />
+    <label for="userpassword" class="form-label">Enter Password :</label>
+    <input
+      type="password"
+      class="form-control"
+      id="userpassword"
+      name="userpassword"
+      placeholder="password"
+    />
+    <button type="submit" class="btn btn-primary my-3 w-100">Login</button>
+  </form>
+  <h6 class="text-center">
+    Don't have an account ? <a href="/register"> Register </a>
+  </h6>
+</div>

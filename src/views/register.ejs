@@ -1,0 +1,33 @@
+<div class="m-5">
+  <h3 class="text-center">REGISTER</h3>
+  <form action="/register" method="post" class="w-25 mx-auto">
+    <label for="username" class="form-label">Enter Name :</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      name="username"
+      placeholder="Enter User Name"
+    />
+    <label for="useremail" class="form-label">Enter Email :</label>
+    <input
+      type="email"
+      class="form-control"
+      id="useremail"
+      name="useremail"
+      placeholder="user@email.com"
+    />
+    <label for="userpassword" class="form-label">Enter Password :</label>
+    <input
+      type="password"
+      class="form-control"
+      id="userpassword"
+      name="userpassword"
+      placeholder="password"
+    />
+    <button type="submit" class="btn btn-primary my-3 w-100">Register</button>
+  </form>
+  <h6 class="text-center">
+    Already have an account ? <a href="/login">Login </a>
+  </h6>
+</div>
